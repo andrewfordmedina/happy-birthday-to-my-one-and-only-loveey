@@ -7,9 +7,17 @@ body{
       font-family: 'Dancing Script', cursive;
       font-weight: 700;
       line-height: 46px;
-      font-size: 9em;
+      font-size: 8em;
       margin-top: .45em;
       }
+h5 {
+        color: #EFF4F7;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700;
+        line-height: 46px;
+        font-size: 6.5em;
+        margin-top: .45em;
+        }
   h2 {
       font-family: 'EB Garamond', serif;
       font-weight: normal;
