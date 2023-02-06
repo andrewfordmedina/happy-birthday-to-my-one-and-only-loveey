@@ -393,7 +393,6 @@
         for (var key in this.data.text_elements) {
             if (!this.config.time[key].show)
                 continue;
-
             var textElement = $("<div>");
             textElement.addClass('textDiv_' + key);
             textElement.css("top", Math.round(0.35 * this.data.attributes.item_size));
@@ -428,6 +427,7 @@
     };
 
     TC_Instance.prototype.update = function(nodraw) {
+        
         if(typeof nodraw === "undefined") {
             nodraw = false;
         }
@@ -449,7 +449,7 @@
             prevDate = curDate;
 
         // If not counting past zero, and time < 0, then simply draw the zero point once, and call stop
-        if (!this.config.count_past_zero) {
+        if (true) {
             if (curDate > this.data.attributes.ref_date) {
                 for(var i = 0; i < this.data.drawn_units.length; i++) {
                     var key = this.data.drawn_units[i];
@@ -461,6 +461,11 @@
                     var color = this.config.time[key].color;
                     this.drawArc(x, y, color, 0);
                 }
+                console.log('time is up')
+                // put 3 second delays before redirect...
+                setTimeout( ()=>{ window.location.href = "https://andrewfordmedina.github.io/happy-birthday-to-my-one-and-only-loveey/celebration.html" }, 3000);
+                
+                //;
                 this.stop();
                 return;
             }
